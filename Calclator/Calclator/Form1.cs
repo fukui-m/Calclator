@@ -16,5 +16,105 @@ namespace Calclator
         {
             InitializeComponent();
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonZeroth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonEqual_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonDot_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSecond_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonThree_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonFirst_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonFourth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSeventh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonEighth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonNineth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSixth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonFifth_ClientSizeChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonFifth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonDiv_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonSub_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonMul_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
