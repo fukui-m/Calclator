@@ -195,7 +195,6 @@
             this.buttonFifth.TabIndex = 15;
             this.buttonFifth.Text = "5";
             this.buttonFifth.UseVisualStyleBackColor = true;
-            this.buttonFifth.ClientSizeChanged += new System.EventHandler(this.buttonFifth_ClientSizeChanged);
             this.buttonFifth.Click += new System.EventHandler(this.ButtonFifth_Click);
             // 
             // buttonSixth

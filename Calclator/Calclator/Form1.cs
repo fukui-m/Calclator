@@ -17,16 +17,6 @@ namespace Calclator
             InitializeComponent();
         }
 
-        private void button13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
 
@@ -83,11 +73,6 @@ namespace Calclator
         }
 
         private void ButtonSixth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonFifth_ClientSizeChanged(object sender, EventArgs e)
         {
 
         }
