@@ -17,7 +17,7 @@ namespace Calclator
             InitializeComponent();
         }
 
-        string Input_str = "";
+        string inputNumber = "";
                
         
         private void ButtonAdd_Click(object sender, EventArgs e)
@@ -60,8 +60,8 @@ namespace Calclator
         {
             Button ButtonNumber = (Button)sender;
             string text = ButtonNumber.Text;
-            Input_str += text;
-            calcWindow.Text = Input_str;
+            inputNumber += text;
+            calcWindow.Text = inputNumber;
         }
     }
 }
