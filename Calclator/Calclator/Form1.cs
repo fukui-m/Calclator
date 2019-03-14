@@ -17,7 +17,8 @@ namespace Calclator
             InitializeComponent();
         }
 
-        string inputNumber = "";
+        string firstInputNumber = "";
+        string secondInputNumber = "";
         string inputOperator = "";     
        
                
@@ -30,13 +31,13 @@ namespace Calclator
         private void ButtonCE_Click(object sender, EventArgs e)
         {
             calcWindow.Text = "";
-            inputNumber = calcWindow.Text;
+            firstInputNumber = calcWindow.Text;
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            string s1 = inputNumber.Remove(1);
-            calcWindow.Text= inputNumber;
+            string s1 = firstInputNumber.Remove(1);
+            calcWindow.Text= firstInputNumber;
            
         }
 
@@ -44,8 +45,16 @@ namespace Calclator
         {
             Button ButtonNumber = (Button)sender;
             string text = ButtonNumber.Text;
-            inputNumber += text;
-            calcWindow.Text = inputNumber;
+            if (inputOperator == "")
+            {
+                firstInputNumber += text;
+                calcWindow.Text = firstInputNumber;
+            }
+            else if(inputOperator != "")
+            {
+                secondInputNumber += text;
+                calcWindow.Text = secondInputNumber;
+            }
         }
 
         private void ButtonOperator_Click(object sender, EventArgs e)
