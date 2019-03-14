@@ -47,7 +47,8 @@ namespace Calclator
 
         private void ButtonCE_Click(object sender, EventArgs e)
         {
-
+            calcWindow.Text = "";
+            Input_str = calcWindow.Text;
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
