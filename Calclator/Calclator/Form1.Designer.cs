@@ -77,7 +77,7 @@
             this.buttonAdd.TabIndex = 4;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            this.buttonAdd.Click += new System.EventHandler(this.ButtonOperator_Click);
             // 
             // buttonSub
             // 
@@ -87,7 +87,7 @@
             this.buttonSub.TabIndex = 5;
             this.buttonSub.Text = "-";
             this.buttonSub.UseVisualStyleBackColor = true;
-            this.buttonSub.Click += new System.EventHandler(this.ButtonSub_Click);
+            this.buttonSub.Click += new System.EventHandler(this.ButtonOperator_Click);
             // 
             // buttonEqual
             // 
@@ -107,7 +107,7 @@
             this.buttonMul.TabIndex = 7;
             this.buttonMul.Text = "*";
             this.buttonMul.UseVisualStyleBackColor = true;
-            this.buttonMul.Click += new System.EventHandler(this.ButtonMul_Click);
+            this.buttonMul.Click += new System.EventHandler(this.ButtonOperator_Click);
             // 
             // buttonThree
             // 
@@ -207,7 +207,7 @@
             this.buttonDiv.TabIndex = 3;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = true;
-            this.buttonDiv.Click += new System.EventHandler(this.ButtonDiv_Click);
+            this.buttonDiv.Click += new System.EventHandler(this.ButtonOperator_Click);
             // 
             // buttonCE
             // 
@@ -265,6 +265,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Click += new System.EventHandler(this.ButtonOperator_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
