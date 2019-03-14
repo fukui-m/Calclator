@@ -97,5 +97,14 @@ namespace Calclator
 
         }
 
+        private void ButtonCE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

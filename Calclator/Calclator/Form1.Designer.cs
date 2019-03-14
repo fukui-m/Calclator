@@ -44,6 +44,8 @@
             this.buttonFifth = new System.Windows.Forms.Button();
             this.buttonSixth = new System.Windows.Forms.Button();
             this.buttonDiv = new System.Windows.Forms.Button();
+            this.buttonCE = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -206,11 +208,33 @@
             this.buttonDiv.UseVisualStyleBackColor = true;
             this.buttonDiv.Click += new System.EventHandler(this.ButtonDiv_Click);
             // 
+            // buttonCE
+            // 
+            this.buttonCE.Location = new System.Drawing.Point(207, 49);
+            this.buttonCE.Name = "buttonCE";
+            this.buttonCE.Size = new System.Drawing.Size(35, 34);
+            this.buttonCE.TabIndex = 17;
+            this.buttonCE.Text = "CE";
+            this.buttonCE.UseVisualStyleBackColor = true;
+            this.buttonCE.Click += new System.EventHandler(this.ButtonCE_Click);
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(207, 101);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(35, 36);
+            this.buttonDelete.TabIndex = 18;
+            this.buttonDelete.Text = "→";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 258);
+            this.Controls.Add(this.buttonDelete);
+            this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.buttonSixth);
             this.Controls.Add(this.buttonFifth);
             this.Controls.Add(this.buttonFourth);
@@ -251,6 +275,8 @@
         private System.Windows.Forms.Button buttonFifth;
         private System.Windows.Forms.Button buttonSixth;
         private System.Windows.Forms.Button buttonDiv;
+        private System.Windows.Forms.Button buttonCE;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
 
