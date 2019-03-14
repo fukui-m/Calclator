@@ -17,70 +17,18 @@ namespace Calclator
             InitializeComponent();
         }
 
+        string Input_str = "";
+               
+        
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void ButtonZeroth_Click(object sender, EventArgs e)
-        {
-
-        }
-
+               
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void ButtonDot_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonSecond_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonThree_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonFirst_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void ButtonFourth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonSeventh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonEighth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonNineth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonSixth_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonFifth_Click(object sender, EventArgs e)
-        {
-
-        }
+        }               
 
         private void ButtonDiv_Click(object sender, EventArgs e)
         {
@@ -105,6 +53,14 @@ namespace Calclator
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ButtonNumber_Click_1(object sender, EventArgs e)
+        {
+            Button ButtonNumber = (Button)sender;
+            string text = ButtonNumber.Text;
+            Input_str += text;
+            calcWindow.Text = Input_str;
         }
     }
 }
