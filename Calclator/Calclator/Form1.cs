@@ -97,9 +97,5 @@ namespace Calclator
 
         }
 
-        private void button18_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
