@@ -46,6 +46,7 @@
             this.buttonDiv = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.calcWindow = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -228,11 +229,22 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.ButtonDelete_Click);
             // 
+            // calcWindow
+            // 
+            this.calcWindow.BackColor = System.Drawing.Color.White;
+            this.calcWindow.Location = new System.Drawing.Point(7, 12);
+            this.calcWindow.Name = "calcWindow";
+            this.calcWindow.ReadOnly = true;
+            this.calcWindow.Size = new System.Drawing.Size(235, 19);
+            this.calcWindow.TabIndex = 19;
+            this.calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 258);
+            this.Controls.Add(this.calcWindow);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.buttonSixth);
@@ -254,6 +266,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -277,6 +290,7 @@
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.TextBox calcWindow;
     }
 }
 
