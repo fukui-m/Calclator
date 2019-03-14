@@ -63,7 +63,7 @@ namespace Calclator
         {
             string s1 = firstInputNumber.Remove(1);
             calcWindow.Text= firstInputNumber;
-           
+            
         }
 
         private void ButtonNumber_Click_1(object sender, EventArgs e)
@@ -106,10 +106,13 @@ namespace Calclator
                 calcWindow.Text = calcResult.ToString();
                 firstInputNumber = calcResult.ToString();
             }
-            Button ButtonOperator = (Button)sender;
-            string text = ButtonOperator.Text;
-            inputOperator = text;
-            secondInputNumber = "";
+            if (firstInputNumber != "")
+            {
+                Button ButtonOperator = (Button)sender;
+                string text = ButtonOperator.Text;
+                inputOperator = text;
+                secondInputNumber = "";
+            }
         }
     }
 }
