@@ -18,41 +18,26 @@ namespace Calclator
         }
 
         string inputNumber = "";
-               
-        
-        private void ButtonAdd_Click(object sender, EventArgs e)
-        {
-
-        }
+        string inputOperator = "";     
+       
                
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
 
         }               
 
-        private void ButtonDiv_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonSub_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ButtonMul_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void ButtonCE_Click(object sender, EventArgs e)
         {
-
+            calcWindow.Text = "";
+            inputNumber = calcWindow.Text;
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-
+            string s1 = inputNumber.Remove(1);
+            calcWindow.Text= inputNumber;
+           
         }
 
         private void ButtonNumber_Click_1(object sender, EventArgs e)
@@ -61,6 +46,14 @@ namespace Calclator
             string text = ButtonNumber.Text;
             inputNumber += text;
             calcWindow.Text = inputNumber;
+        }
+
+        private void ButtonOperator_Click(object sender, EventArgs e)
+        {
+            Button ButtonOperator = (Button)sender;
+            string text = ButtonOperator.Text;
+            inputOperator = text;
+            calcWindow.Text = inputOperator;
         }
     }
 }
