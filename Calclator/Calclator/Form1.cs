@@ -61,10 +61,18 @@ namespace Calclator
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            string s1 = firstInputNumber.Remove(1);
-            calcWindow.Text= firstInputNumber;
-            
+            if (firstInputNumber!="")
+            {
+                firstInputNumber = firstInputNumber.Remove(0,1);
+                calcWindow.Text = firstInputNumber;
+            }
+            else if (secondInputNumber == calcWindow.Text)
+            {
+                secondInputNumber = secondInputNumber.Remove(0, 1);
+                calcWindow.Text = secondInputNumber;
+            }
         }
+
 
         private void ButtonNumber_Click_1(object sender, EventArgs e)
         {
