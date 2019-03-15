@@ -10,46 +10,32 @@ using System.Windows.Forms;
 
 namespace Calclator
 {
-    public partial class Form1 :Form
+    public partial class Form1 : Form
     {
         public Form1()
         {
             InitializeComponent();
         }
 
-        string firstInputNumber = "";
-        string secondInputNumber = "";
-        string inputOperator = "";
-        double calcResult=0;
+        static string firstInputNumber = "";
+        static string secondInputNumber = "";
+        static string inputOperator = "";
+        static double calcResult = 0;
+
+        delegate void DelegateProcessing();
        
-               
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
             if (secondInputNumber != "")
             {
-                if (inputOperator == "+")
-                {
-                    calcResult = int.Parse(firstInputNumber) + int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "-")
-                {
-                    calcResult = int.Parse(firstInputNumber) - int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "*")
-                {
-                    calcResult = int.Parse(firstInputNumber) * int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "/")
-                {
-                    calcResult = int.Parse(firstInputNumber) / int.Parse(secondInputNumber);
-                }
+                DP();
             }
             calcWindow.Text = calcResult.ToString();
             firstInputNumber = calcResult.ToString();
             secondInputNumber = "";
-        }               
+        }
 
-        
+
         private void ButtonCE_Click(object sender, EventArgs e)
         {
             calcWindow.Text = "";
@@ -61,14 +47,14 @@ namespace Calclator
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (inputOperator==""&&firstInputNumber!="")
+            if (inputOperator == "" && firstInputNumber != "")
             {
-                firstInputNumber =  firstInputNumber.Remove(firstInputNumber.Length-1, 1);
+                firstInputNumber = firstInputNumber.Remove(firstInputNumber.Length - 1, 1);
                 calcWindow.Text = firstInputNumber;
             }
-            else if (inputOperator!=""&&secondInputNumber!="")
+            else if (inputOperator != "" && secondInputNumber != "")
             {
-                secondInputNumber = secondInputNumber.Remove(secondInputNumber.Length-1, 1);
+                secondInputNumber = secondInputNumber.Remove(secondInputNumber.Length - 1, 1);
                 calcWindow.Text = secondInputNumber;
             }
         }
@@ -83,7 +69,7 @@ namespace Calclator
                 firstInputNumber += text;
                 calcWindow.Text = firstInputNumber;
             }
-            else if(inputOperator != "")
+            else if (inputOperator != "")
             {
                 secondInputNumber += text;
                 calcWindow.Text = secondInputNumber;
@@ -92,25 +78,10 @@ namespace Calclator
 
         private void ButtonOperator_Click(object sender, EventArgs e)
         {
-            
+
             if (secondInputNumber != "")
             {
-                if (inputOperator == "+")
-                {
-                    calcResult = int.Parse(firstInputNumber) + int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "-")
-                {
-                    calcResult = int.Parse(firstInputNumber) - int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "*")
-                {
-                    calcResult = int.Parse(firstInputNumber) * int.Parse(secondInputNumber);
-                }
-                else if (inputOperator == "/")
-                {
-                    calcResult = int.Parse(firstInputNumber) / int.Parse(secondInputNumber);
-                }                
+                DP();
                 calcWindow.Text = calcResult.ToString();
                 firstInputNumber = calcResult.ToString();
             }
@@ -122,5 +93,25 @@ namespace Calclator
                 secondInputNumber = "";
             }
         }
+        static void Processing()
+        {
+            if (inputOperator == "+")
+            {
+                calcResult = int.Parse(firstInputNumber) + int.Parse(secondInputNumber);
+            }
+            else if (inputOperator == "-")
+            {
+                calcResult = int.Parse(firstInputNumber) - int.Parse(secondInputNumber);
+            }
+            else if (inputOperator == "*")
+            {
+                calcResult = int.Parse(firstInputNumber) * int.Parse(secondInputNumber);
+            }
+            else if (inputOperator == "/")
+            {
+                calcResult = int.Parse(firstInputNumber) / int.Parse(secondInputNumber);
+            }
+        }
+        DelegateProcessing DP = new DelegateProcessing(Processing);
     }
 }
