@@ -53,22 +53,22 @@ namespace Calclator
         private void ButtonCE_Click(object sender, EventArgs e)
         {
             calcWindow.Text = "";
-            firstInputNumber = calcWindow.Text;
-            secondInputNumber = calcWindow.Text;
-            inputOperator = calcWindow.Text;
+            firstInputNumber = "";
+            secondInputNumber = "";
+            inputOperator = "";
             calcResult = 0;
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
         {
-            if (firstInputNumber!="")
+            if (inputOperator==""&&firstInputNumber!="")
             {
-                firstInputNumber = firstInputNumber.Remove(0,1);
+                firstInputNumber =  firstInputNumber.Remove(firstInputNumber.Length-1, 1);
                 calcWindow.Text = firstInputNumber;
             }
-            else if (secondInputNumber == calcWindow.Text)
+            else if (inputOperator!=""&&secondInputNumber!="")
             {
-                secondInputNumber = secondInputNumber.Remove(0, 1);
+                secondInputNumber = secondInputNumber.Remove(secondInputNumber.Length-1, 1);
                 calcWindow.Text = secondInputNumber;
             }
         }
