@@ -123,7 +123,7 @@ namespace Calclator
         }
         private void ButtonDot_Click(object sender, EventArgs e)
         {
-            if (calcWindow.Text != "" ) 
+            if (calcWindow.Text != ""&&!calcWindow.Text.Any(a=>a.ToString()==".")) 
             {
 
                 Button ButtonNumber = (Button)sender;
