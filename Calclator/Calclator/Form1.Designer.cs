@@ -232,10 +232,11 @@
             // calcWindow
             // 
             this.calcWindow.BackColor = System.Drawing.Color.White;
+            this.calcWindow.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.calcWindow.Location = new System.Drawing.Point(7, 12);
             this.calcWindow.Name = "calcWindow";
             this.calcWindow.ReadOnly = true;
-            this.calcWindow.Size = new System.Drawing.Size(235, 19);
+            this.calcWindow.Size = new System.Drawing.Size(235, 28);
             this.calcWindow.TabIndex = 19;
             this.calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
