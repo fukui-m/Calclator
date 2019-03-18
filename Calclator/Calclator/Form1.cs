@@ -21,18 +21,21 @@ namespace Calclator
         static string secondInputNumber = "";
         static string inputOperator = "";
         static double calcResult = 0;
+        
 
         delegate void DelegateProcessing();
-       
+        delegate void DelegateNumImput();
+
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
             if (secondInputNumber != "")
             {
                 DP();
+
+                calcWindow.Text = calcResult.ToString();
+                firstInputNumber = calcResult.ToString();
+                secondInputNumber = "";
             }
-            calcWindow.Text = calcResult.ToString();
-            firstInputNumber = calcResult.ToString();
-            secondInputNumber = "";
         }
 
 
@@ -43,6 +46,7 @@ namespace Calclator
             secondInputNumber = "";
             inputOperator = "";
             calcResult = 0;
+            
         }
 
         private void ButtonDelete_Click(object sender, EventArgs e)
@@ -62,8 +66,13 @@ namespace Calclator
 
         private void ButtonNumber_Click_1(object sender, EventArgs e)
         {
-            Button ButtonNumber = (Button)sender;
-            string text = ButtonNumber.Text;
+            if (calcWindow.Text == "0")
+            {
+                calcWindow.Text= "";
+                firstInputNumber ="";
+            }
+                Button ButtonNumber = (Button)sender;
+                string text = ButtonNumber.Text;
             if (inputOperator == "")
             {
                 firstInputNumber += text;
@@ -73,7 +82,7 @@ namespace Calclator
             {
                 secondInputNumber += text;
                 calcWindow.Text = secondInputNumber;
-            }
+            }                     
         }
 
         private void ButtonOperator_Click(object sender, EventArgs e)
@@ -93,25 +102,64 @@ namespace Calclator
                 secondInputNumber = "";
             }
         }
+
+        private void ButtonZeroth_Click_1(object sender, EventArgs e)
+        {
+            if (calcWindow.Text != "0")
+            {
+                string text = "0";
+                if (inputOperator == "")
+                {
+                    firstInputNumber += text;
+                    calcWindow.Text = firstInputNumber;
+                }
+                else if (inputOperator != "")
+                {
+                    secondInputNumber += text;
+                    calcWindow.Text = secondInputNumber;
+                }
+            }
+        }
+        private void ButtonDot_Click(object sender, EventArgs e)
+        {
+            if (calcWindow.Text != ""&&!calcWindow.Text.Any(a=>a.ToString()==".")) 
+            {
+                string text = ".";
+                if (inputOperator == "")
+                {
+                    firstInputNumber += text;
+                    calcWindow.Text = firstInputNumber;
+                }
+                else if (inputOperator != "")
+                {
+                    secondInputNumber += text;
+                    calcWindow.Text = secondInputNumber;
+                }
+            }
+        }
+
         static void Processing()
         {
+            
             if (inputOperator == "+")
             {
-                calcResult = int.Parse(firstInputNumber) + int.Parse(secondInputNumber);
+                calcResult = double.Parse(firstInputNumber) + double.Parse(secondInputNumber);
             }
             else if (inputOperator == "-")
             {
-                calcResult = int.Parse(firstInputNumber) - int.Parse(secondInputNumber);
+                calcResult = double.Parse(firstInputNumber) - double.Parse(secondInputNumber);
             }
             else if (inputOperator == "*")
             {
-                calcResult = int.Parse(firstInputNumber) * int.Parse(secondInputNumber);
+                calcResult = double.Parse(firstInputNumber) * double.Parse(secondInputNumber);
             }
             else if (inputOperator == "/")
             {
-                calcResult = int.Parse(firstInputNumber) / int.Parse(secondInputNumber);
+                calcResult = double.Parse(firstInputNumber) / double.Parse(secondInputNumber);
             }
         }
         DelegateProcessing DP = new DelegateProcessing(Processing);
-    }
+        
+ 
+    }   
 }

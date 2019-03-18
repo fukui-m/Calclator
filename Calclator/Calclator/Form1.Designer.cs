@@ -46,7 +46,7 @@
             this.buttonDiv = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.calcWindow = new System.Windows.Forms.TextBox();
+            calcWindow = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -57,7 +57,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = ".";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.ButtonNumber_Click_1);
+            this.button1.Click += new System.EventHandler(this.ButtonDot_Click);
             // 
             // buttonSecond
             // 
@@ -127,7 +127,7 @@
             this.buttonZeroth.TabIndex = 9;
             this.buttonZeroth.Text = "0";
             this.buttonZeroth.UseVisualStyleBackColor = true;
-            this.buttonZeroth.Click += new System.EventHandler(this.ButtonNumber_Click_1);
+            this.buttonZeroth.Click += new System.EventHandler(this.ButtonZeroth_Click_1);
             // 
             // buttonNineth
             // 
@@ -231,20 +231,20 @@
             // 
             // calcWindow
             // 
-            this.calcWindow.BackColor = System.Drawing.Color.White;
-            this.calcWindow.Location = new System.Drawing.Point(7, 12);
-            this.calcWindow.Name = "calcWindow";
-            this.calcWindow.ReadOnly = true;
-            this.calcWindow.Size = new System.Drawing.Size(235, 19);
-            this.calcWindow.TabIndex = 19;
-            this.calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            calcWindow.BackColor = System.Drawing.Color.White;
+            calcWindow.Location = new System.Drawing.Point(7, 12);
+            calcWindow.Name = "calcWindow";
+            calcWindow.ReadOnly = true;
+            calcWindow.Size = new System.Drawing.Size(235, 19);
+            calcWindow.TabIndex = 19;
+            calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 258);
-            this.Controls.Add(this.calcWindow);
+            this.Controls.Add(calcWindow);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.buttonSixth);
@@ -265,7 +265,6 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Click += new System.EventHandler(this.ButtonOperator_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,7 +290,7 @@
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.TextBox calcWindow;
+        private static System.Windows.Forms.TextBox calcWindow;
     }
 }
 
