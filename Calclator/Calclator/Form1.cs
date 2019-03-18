@@ -24,7 +24,6 @@ namespace Calclator
         
 
         delegate void DelegateProcessing();
-        delegate void DelegateNumImput();
 
         private void ButtonEqual_Click(object sender, EventArgs e)
         {
