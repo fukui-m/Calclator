@@ -46,7 +46,7 @@
             this.buttonDiv = new System.Windows.Forms.Button();
             this.buttonCE = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            calcWindow = new System.Windows.Forms.TextBox();
+            this.calcWindow = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -231,20 +231,21 @@
             // 
             // calcWindow
             // 
-            calcWindow.BackColor = System.Drawing.Color.White;
-            calcWindow.Location = new System.Drawing.Point(7, 12);
-            calcWindow.Name = "calcWindow";
-            calcWindow.ReadOnly = true;
-            calcWindow.Size = new System.Drawing.Size(235, 19);
-            calcWindow.TabIndex = 19;
-            calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.calcWindow.BackColor = System.Drawing.Color.White;
+            this.calcWindow.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.calcWindow.Location = new System.Drawing.Point(7, 12);
+            this.calcWindow.Name = "calcWindow";
+            this.calcWindow.ReadOnly = true;
+            this.calcWindow.Size = new System.Drawing.Size(235, 28);
+            this.calcWindow.TabIndex = 19;
+            this.calcWindow.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(251, 258);
-            this.Controls.Add(calcWindow);
+            this.Controls.Add(this.calcWindow);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonCE);
             this.Controls.Add(this.buttonSixth);
@@ -290,7 +291,7 @@
         private System.Windows.Forms.Button buttonDiv;
         private System.Windows.Forms.Button buttonCE;
         private System.Windows.Forms.Button buttonDelete;
-        private static System.Windows.Forms.TextBox calcWindow;
+        private System.Windows.Forms.TextBox calcWindow;
     }
 }
 
